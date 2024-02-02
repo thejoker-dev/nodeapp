@@ -43,15 +43,11 @@ jobs:
             type=sha,prefix=,suffix=,format=short  
       
       # Build and push Docker image with Buildx
-      # (don't push on PR, load instead)
       - name: Build and push Docker image 🛠️
         id: build-and-push
         uses: docker/build-push-action@v5
         with:
           context: .
-          sbom: ${{ github.event_name != 'pull_request' }}
-          provenance: ${{ github.event_name != 'pull_request' }}
-          push: ${{ github.event_name != 'pull_request' }}
-          load: ${{ github.event_name == 'pull_request' }}
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
