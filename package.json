@@ -1,5 +1,5 @@
 {
-  "name": "node-app",
+  "name": "nodeapp",
   "description": "Nodeapp for CI/CD test",
   "version": "0.0.1",
   "private": true,
