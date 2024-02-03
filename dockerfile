@@ -1,3 +1,5 @@
+FROM ${BASE_IMAGE}
+
 FROM node:latest
 
 WORKDIR /usr/src/app
