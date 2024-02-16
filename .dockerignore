@@ -2,3 +2,5 @@
 node_modules
 npm-debug.log
 Jenkinsfile
+.next
+next-env.d.ts
